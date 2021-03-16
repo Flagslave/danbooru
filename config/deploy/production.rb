@@ -5,5 +5,5 @@ append :linked_files, ".env.production"
 
 server "localhost", :roles => %w(web app cron worker db), :primary => true
 
-set :newrelic_appname, "Danbooru"
-after "deploy:finished", "newrelic:notice_deployment"
+#set :newrelic_appname, "Danbooru"
+#after "deploy:finished", "newrelic:notice_deployment"
