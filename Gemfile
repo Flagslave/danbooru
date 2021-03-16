@@ -60,7 +60,7 @@ end
 group :production do
   gem 'unicorn-worker-killer'
 #  gem 'newrelic_rpm'
-  gem 'capistrano-deploytags', '~> 1.0.0', require: false
+#  gem 'capistrano-deploytags', '~> 1.0.0', require: false
 end
 
 group :development do
