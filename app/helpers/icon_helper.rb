@@ -170,6 +170,10 @@ module IconHelper
     image_icon_tag("github-logo.png", **options)
   end
 
+  def telegram_icon(**options)
+    image_icon_tag("telegram-logo.png", **options)
+  end
+
   def twitter_icon(**options)
     image_icon_tag("twitter-logo.png", **options)
   end

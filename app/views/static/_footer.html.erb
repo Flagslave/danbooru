@@ -19,5 +19,10 @@
         <%= discord_icon %>
       <% end %>
     <% end %>
+    <% if Danbooru.config.telegram_server_url.present? %>
+      <%= link_to Danbooru.config.telegram_server_url, class: "social-icon" do %>
+        <%= telegram_icon %>
+      <% end %>
+    <% end %>
   </span>
 </footer>
