@@ -435,6 +435,11 @@ module Danbooru
       nil
     end
 
+    # The url of the Telegram server associated with this site.
+    def telegram_server_url
+      "https://t.me/ComfyMetro"
+    end
+
     # The twitter username associated with this site (username only, don't include the @-sign).
     def twitter_username
       nil
