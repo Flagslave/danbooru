@@ -9,7 +9,7 @@
 
 module SeoHelper
   def site_description
-    "#{Danbooru.config.canonical_app_name} is the original anime image booru. Search millions of anime pictures categorized by thousands of tags."
+    "#{Danbooru.config.canonical_app_name} is a crypto image board. Search hundreds of crypto pictures categorized by many tags."
   end
 
   # https://developers.google.com/search/docs/data-types/video#video-object
@@ -27,10 +27,8 @@ module SeoHelper
 
   def json_ld_website_data
     urls = [
-      Danbooru.config.twitter_url,
-      Danbooru.config.discord_server_url,
-      Danbooru.config.source_code_url,
-      "https://en.wikipedia.org/wiki/Danbooru"
+      Danbooru.config.telegram_server_url,
+      Danbooru.config.source_code_url
     ].compact
 
     json_ld_tag({

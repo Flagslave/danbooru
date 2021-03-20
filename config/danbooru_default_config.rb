@@ -20,12 +20,12 @@ module Danbooru
     end
 
     def canonical_app_name
-      "Danbooru"
+      "ComfyMetro"
     end
 
     # The canonical hostname for the site, e.g. danbooru.donmai.us.
     def hostname
-      Socket.gethostname
+      "comfymetro.com"
     end
 
     # The canonical url for the site (e.g. https://danbooru.donmai.us)
@@ -35,7 +35,7 @@ module Danbooru
 
     # Contact email address of the admin.
     def contact_email
-      "webmaster@#{hostname}"
+      "TBA"
     end
 
     # System actions, such as sending automated dmails, will be performed with
