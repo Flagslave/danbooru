@@ -424,9 +424,9 @@ class User < ApplicationRecord
         elsif level == User::Levels::PLATINUM
           12
         elsif level == User::Levels::GOLD
-          6
+          8
         else
-          2
+          5
         end
       end
 
