@@ -16,10 +16,6 @@ class PostApproval < ApplicationRecord
       errors.add(:post, "is already active and cannot be approved")
     end
 
-    if post.uploader == user
-      errors.add(:base, "You cannot approve a post you uploaded")
-    end
-
     if post.approver == user || post.approvals.where(user: user).exists?
       errors.add(:base, "You have previously approved this post and cannot approve it again")
     end
