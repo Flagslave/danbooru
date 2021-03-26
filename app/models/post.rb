@@ -297,7 +297,7 @@ class Post < ApplicationRecord
     end
 
     def is_approvable?(user = CurrentUser.user)
-      !is_status_locked? && !is_active? && uploader != user
+      !is_status_locked? && !is_active?
     end
 
     def flag!(reason, is_deletion: false)
@@ -1387,7 +1387,7 @@ class Post < ApplicationRecord
     end
 
     def uploader_is_not_limited
-      errors.add(:uploader, "have reached your upload limit") if uploader.upload_limit.limited?
+      errors.add(:uploader, "have reached your upload limit - check contact options at bottom of the page!") if uploader.upload_limit.limited?
     end
 
     def added_tags_are_valid
@@ -1433,14 +1433,14 @@ class Post < ApplicationRecord
       return if !new_record?
       return if has_tag?("copyright_request") || tags.any?(&:copyright?)
 
-      warnings.add(:base, "Copyright tag is required. Consider adding [[copyright request]] or [[original]]")
+      warnings.add(:base, "No copyright tag found (optional). But you can add [[copyright request]] or [[original]]")
     end
 
     def has_enough_tags
       return if !new_record?
 
       if tags.count(&:general?) < 10
-        warnings.add(:base, "Uploads must have at least 10 general tags. Read [[howto:tag]] for guidelines on tagging your uploads")
+        warnings.add(:base, "Less than 10 tags? Add more if you can to improve searchability! Read [[howto:tag]] for guidelines on tagging your uploads")
       end
     end
   end
