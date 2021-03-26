@@ -40,7 +40,7 @@
           <%= tag.button "Similar", id: "similar-button" %>
         </div>
 
-        <%= f.input :rating, collection: [["Explicit", "e"], ["Questionable", "q"], ["Safe", "s"]], as: :radio_buttons, :selected => ["Safe", "s"] %>
+        <%= f.input :rating, collection: [["Explicit", "e"], ["Questionable", "q"], ["Safe", "s"]], as: :radio_buttons, :checked => ["Safe", "s"] %>
 
         <%= f.input :parent_id, label: "Parent ID", as: :string, input_html: { value: params[:parent_id] } %>
 
